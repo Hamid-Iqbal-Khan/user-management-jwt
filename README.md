@@ -1,9 +1,8 @@
 # 🧑‍💻 User Management System – Spring Boot + JWT
 > Architected • Secure • Scalable • Interview-Ready Backend Application
 
----
 
-## 📌 Overview
+## Overview
 
 This project is a **User Management System** built using **Spring Boot** with **JWT-based authentication**.  
 It follows **clean layered architecture**, **enterprise best practices**, and **stateless security design**.
@@ -14,9 +13,8 @@ This repository can be used as:
 - A strong portfolio project for interviews
 - A base for scaling into microservices
 
----
 
-## 🎯 Project Goals
+## Project Goals
 
 - Implement **secure authentication** using JWT
 - Follow **clean layered architecture**
@@ -24,9 +22,7 @@ This repository can be used as:
 - Design with **scalability & maintainability** in mind
 - Provide **architect-level documentation**
 
----
-
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ### High-Level Architecture
 ![img.png](img.png)
@@ -38,9 +34,7 @@ This repository can be used as:
 - JWT-based Authentication
 - Centralized Exception Handling
 
----
-
-## 📂 Package Structure
+## Package Structure
 
 com.hamid.usermanagement
 ├── controller → REST API endpoints
@@ -59,9 +53,8 @@ com.hamid.usermanagement
 - Industry-standard Spring Boot layout
 - Microservice-ready
 
----
 
-## 🔐 Security Architecture (JWT)
+## Security Architecture (JWT)
 
 ### Why JWT?
 - Stateless authentication
@@ -79,9 +72,7 @@ com.hamid.usermanagement
 6. `SecurityContext` is populated
 7. Protected APIs are accessed
 
----
-
-## 🧠 Layer-by-Layer Explanation
+## Layer-by-Layer Explanation
 
 ### 1️⃣ Controller Layer
 **Responsibilities**
@@ -93,7 +84,6 @@ com.hamid.usermanagement
 - Contain business logic
 - Access database directly
 
----
 
 ### 2️⃣ DTO Layer
 **Why DTOs**
@@ -108,7 +98,6 @@ com.hamid.usermanagement
 - `UpdateUserRequest`
 - `AuthResponse`
 
----
 
 ### 3️⃣ Service Layer
 **Responsibilities**
@@ -122,7 +111,6 @@ com.hamid.usermanagement
 - Ensures atomic operations
 - Prevents partial database updates
 
----
 
 ### 4️⃣ Repository Layer
 **Responsibilities**
@@ -134,7 +122,6 @@ com.hamid.usermanagement
 - Cleaner and testable code
 - Database-agnostic
 
----
 
 ### 5️⃣ Security Layer
 **Components**
@@ -149,7 +136,6 @@ com.hamid.usermanagement
 - HTTP Basic disabled
 - Custom JWT filter integrated
 
----
 
 ### 6️⃣ Exception Handling Layer
 **Why centralized handling**
@@ -162,9 +148,8 @@ com.hamid.usermanagement
 - `UserAlreadyExistsException` → 400 BAD REQUEST
 - `UserNotExistException` → 404 NOT FOUND
 
----
 
-## 🔑 API Endpoints
+## API Endpoints
 
 ### Authentication APIs
 | Method | Endpoint | Description |
@@ -178,42 +163,35 @@ com.hamid.usermanagement
 | PUT | `/api/users/update/{id}` | Update user |
 | DELETE | `/api/users/{id}` | Delete user |
 
----
 
-## 🔐 Authorization Header
+## Authorization Header
 Authorization: Bearer <JWT_TOKEN>
 
 
----
-
-## 🧪 Validation Rules
+## Validation Rules
 
 - Email must be valid
 - Password minimum length: 6
 - Mandatory fields enforced using Jakarta Validation
 - Invalid input returns `400 Bad Request`
 
----
 
-## 🛡️ Password Security
+## Password Security
 
 - Passwords are never stored in plain text
 - BCrypt hashing is used
 - Automatic salting
 - Resistant to brute-force attacks
 
----
 
-## 🗄️ Database
+## Database
 
 - PostgreSQL
 - JPA / Hibernate
 - Auto-generated primary keys
 - Unique constraint on email
 
----
-
-## ⚙️ Configuration
+## Configuration
 
 ### application.properties
 ```properties
